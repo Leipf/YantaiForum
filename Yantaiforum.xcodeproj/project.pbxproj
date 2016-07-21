@@ -11,9 +11,14 @@
 		3F4B8AE61D3F797600DAEC08 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B8AE51D3F797600DAEC08 /* AppDelegate.m */; };
 		3F4B8AEE1D3F797600DAEC08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F4B8AED1D3F797600DAEC08 /* Assets.xcassets */; };
 		3F4B8AF11D3F797600DAEC08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F4B8AEF1D3F797600DAEC08 /* LaunchScreen.storyboard */; };
+		660FD226A2D15077EB58F384 /* libPods-Yantaiforum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA38CE7D037D3DF5A0A0D7E /* libPods-Yantaiforum.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1DA38CE7D037D3DF5A0A0D7E /* libPods-Yantaiforum.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Yantaiforum.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2265CBC2C29F06BB7F98A680 /* Pods-Yantaiforum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yantaiforum.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yantaiforum/Pods-Yantaiforum.release.xcconfig"; sourceTree = "<group>"; };
+		3F46417E1D406CAB004547A4 /* Yantaiforum-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Yantaiforum-Prefix.pch"; sourceTree = "<group>"; };
+		3F46417F1D407554004547A4 /* UsualDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UsualDefine.h; sourceTree = "<group>"; };
 		3F4B8ADE1D3F797600DAEC08 /* Yantaiforum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yantaiforum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F4B8AE21D3F797600DAEC08 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3F4B8AE41D3F797600DAEC08 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
@@ -21,6 +26,7 @@
 		3F4B8AED1D3F797600DAEC08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F4B8AF01D3F797600DAEC08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F4B8AF21D3F797600DAEC08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCF221F93ED5905FA56E46FE /* Pods-Yantaiforum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yantaiforum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yantaiforum/Pods-Yantaiforum.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,17 +34,52 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				660FD226A2D15077EB58F384 /* libPods-Yantaiforum.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27B39D3D066C9C47561C58EE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DCF221F93ED5905FA56E46FE /* Pods-Yantaiforum.debug.xcconfig */,
+				2265CBC2C29F06BB7F98A680 /* Pods-Yantaiforum.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3F4641781D406509004547A4 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				3F4641791D406509004547A4 /* FirstStagePage */,
+				3F46417A1D406509004547A4 /* MainTabbar */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		3F4641791D406509004547A4 /* FirstStagePage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FirstStagePage;
+			sourceTree = "<group>";
+		};
+		3F46417A1D406509004547A4 /* MainTabbar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MainTabbar;
+			sourceTree = "<group>";
+		};
 		3F4B8AD51D3F797600DAEC08 = {
 			isa = PBXGroup;
 			children = (
 				3F4B8AE01D3F797600DAEC08 /* Yantaiforum */,
 				3F4B8ADF1D3F797600DAEC08 /* Products */,
+				27B39D3D066C9C47561C58EE /* Pods */,
+				49CE4A650C4DAAD3452FFEE5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +94,7 @@
 		3F4B8AE01D3F797600DAEC08 /* Yantaiforum */ = {
 			isa = PBXGroup;
 			children = (
+				3F46417E1D406CAB004547A4 /* Yantaiforum-Prefix.pch */,
 				3F4B8AF81D3F799D00DAEC08 /* Resource */,
 				3F4B8AFD1D3F7AE500DAEC08 /* Modules */,
 				3F4B8AF91D3F79F200DAEC08 /* Categories */,
@@ -109,6 +151,7 @@
 		3F4B8AFD1D3F7AE500DAEC08 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3F4641781D406509004547A4 /* Tabbar */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -116,6 +159,7 @@
 		3F4B8AFF1D3F7B1900DAEC08 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				3F46417F1D407554004547A4 /* UsualDefine.h */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -127,6 +171,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		49CE4A650C4DAAD3452FFEE5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DA38CE7D037D3DF5A0A0D7E /* libPods-Yantaiforum.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +186,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F4B8AF51D3F797600DAEC08 /* Build configuration list for PBXNativeTarget "Yantaiforum" */;
 			buildPhases = (
+				C4F44277111F09611BD5AE7A /* [CP] Check Pods Manifest.lock */,
 				3F4B8ADA1D3F797600DAEC08 /* Sources */,
 				3F4B8ADB1D3F797600DAEC08 /* Frameworks */,
 				3F4B8ADC1D3F797600DAEC08 /* Resources */,
+				CD5348C57B05FF1709B21454 /* [CP] Embed Pods Frameworks */,
+				29D6A43025C60BA7FC33EE42 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,6 +245,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29D6A43025C60BA7FC33EE42 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yantaiforum/Pods-Yantaiforum-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4F44277111F09611BD5AE7A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CD5348C57B05FF1709B21454 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Yantaiforum/Pods-Yantaiforum-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3F4B8ADA1D3F797600DAEC08 /* Sources */ = {
@@ -301,25 +404,33 @@
 		};
 		3F4B8AF61D3F797600DAEC08 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCF221F93ED5905FA56E46FE /* Pods-Yantaiforum.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Yantaiforum/Yantaiforum-Prefix.pch";
 				INFOPLIST_FILE = Yantaiforum/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sunxb.Yantaiforum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Debug;
 		};
 		3F4B8AF71D3F797600DAEC08 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2265CBC2C29F06BB7F98A680 /* Pods-Yantaiforum.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Yantaiforum/Yantaiforum-Prefix.pch";
 				INFOPLIST_FILE = Yantaiforum/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sunxb.Yantaiforum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Release;
 		};

@@ -1,0 +1,25 @@
+//
+//  Yantaiforum-Prefix.pch
+//  Yantaiforum
+//
+//  Created by sunxb on 16/7/21.
+//  Copyright © 2016年 sunxb. All rights reserved.
+//
+
+#ifndef Yantaiforum_Prefix_pch
+#define Yantaiforum_Prefix_pch
+
+// -- 只导入头文件
+#import <UIKit/UIKit.h>
+#import <AFNetworking.h>
+#import <MBProgressHUD.h>
+#import <UIImageView+WebCache.h>
+#import <POP.h>
+
+// -- 在UsualDefine定义常用宏
+#import "UsualDefine.h"
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* Yantaiforum_Prefix_pch */

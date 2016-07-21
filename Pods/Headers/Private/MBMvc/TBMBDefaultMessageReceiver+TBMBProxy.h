@@ -1,0 +1,1 @@
+../../../MBMvc/Pod/Classes/Proxy/TBMBDefaultMessageReceiver+TBMBProxy.h
