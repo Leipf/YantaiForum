@@ -1,5 +1,10 @@
 # YantaiForum
 
+###代码要求
+####新建的ViewController要继承自YTBaseViewController
+
+====
+
 ####文件分类
 **Recouse --- 图片资料**
 
@@ -12,3 +17,5 @@
 **Utils --- 常用的宏定义**
 
 **SuperClass --- 重要的父类**
+
+
