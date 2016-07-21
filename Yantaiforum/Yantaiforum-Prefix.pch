@@ -12,7 +12,6 @@
 // -- 只导入头文件
 #import <UIKit/UIKit.h>
 #import <AFNetworking.h>
-#import <MBProgressHUD.h>
 #import <UIImageView+WebCache.h>
 #import <POP.h>
 

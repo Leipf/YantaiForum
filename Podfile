@@ -5,5 +5,5 @@ target 'Yantaiforum' do
     pod 'MBMvc'
     pod 'SDWebImage'
     pod 'pop'
-    pod 'MBProgressHUD'
+    pod 'SVProgressHUD'
 end

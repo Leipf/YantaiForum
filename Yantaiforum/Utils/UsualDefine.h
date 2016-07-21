@@ -18,9 +18,13 @@
 #define __ScreenFrame       [[UIScreen mainScreen] bounds]
 #define __Screen_Width      [[UIScreen mainScreen] bounds].size.width
 #define __Screen_Height     ([[UIScreen mainScreen] bounds].size.height - 20)
-#define __Height_noNavTab   (__MainScreen_Height - 44 - 50)
-#define __Height_noTab      (__MainScreen_Height - 44)
+#define __Height_noNavTab   (__Screen_Height - 44 - 50)
+#define __Height_noTab      (__Screen_Height - 44)
 
+#define IOS_VERSION     [[[UIDevice currentDevice] systemVersion] floatValue]
+#define IOS7_OR_LATER   (IOS_VERSION >= 7.0f)
+#define IOS8_OR_LATER   (IOS_VERSION >= 8.0f)
+#define IOS9_OR_LATER   (IOS_VERSION >= 9.0f)
 #define kNavBarViewHeight           (IOS7_OR_LATER?64:44)
 #define kStatusBarHeight            (IOS7_OR_LATER?20:0)
 

@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F4641891D408D97004547A4 /* tab_icon_find_f.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F4641811D408D97004547A4 /* tab_icon_find_f.png */; };
+		3F46418A1D408D97004547A4 /* tab_icon_find_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F4641821D408D97004547A4 /* tab_icon_find_n.png */; };
+		3F46418B1D408D97004547A4 /* tab_icon_index_f.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F4641831D408D97004547A4 /* tab_icon_index_f.png */; };
+		3F46418C1D408D97004547A4 /* tab_icon_index_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F4641841D408D97004547A4 /* tab_icon_index_n.png */; };
+		3F46418D1D408D97004547A4 /* tab_icon_message_f.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F4641851D408D97004547A4 /* tab_icon_message_f.png */; };
+		3F46418E1D408D97004547A4 /* tab_icon_message_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F4641861D408D97004547A4 /* tab_icon_message_n.png */; };
+		3F46418F1D408D97004547A4 /* tab_icon_picshare_f.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F4641871D408D97004547A4 /* tab_icon_picshare_f.png */; };
+		3F4641901D408D97004547A4 /* tab_icon_picshare_n.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F4641881D408D97004547A4 /* tab_icon_picshare_n.png */; };
+		3F4641951D408E38004547A4 /* MyTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4641921D408E38004547A4 /* MyTabBarItem.m */; };
+		3F4641961D408E38004547A4 /* MainTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4641941D408E38004547A4 /* MainTabbarController.m */; };
+		3F4641AC1D40940D004547A4 /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4641AB1D40940D004547A4 /* HomePageViewController.m */; };
+		3F4641AF1D409429004547A4 /* SharePictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4641AE1D409429004547A4 /* SharePictureViewController.m */; };
+		3F4641B21D409435004547A4 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4641B11D409435004547A4 /* MessageViewController.m */; };
+		3F4641B51D409441004547A4 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4641B41D409441004547A4 /* FindViewController.m */; };
+		3F4641B91D409AE1004547A4 /* YTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4641B81D409AE1004547A4 /* YTBaseViewController.m */; };
+		3F4641BC1D409B1A004547A4 /* YTNavgationBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4641BB1D409B1A004547A4 /* YTNavgationBarView.m */; };
+		3F4641C01D40A7DC004547A4 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4641BF1D40A7DC004547A4 /* UINavigationController+FDFullscreenPopGesture.m */; };
+		3F4641C21D40AF9F004547A4 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F4641C11D40AF9F004547A4 /* back.png */; };
+		3F4641C51D40B27B004547A4 /* YTHudView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4641C41D40B27B004547A4 /* YTHudView.m */; };
 		3F4B8AE31D3F797600DAEC08 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B8AE21D3F797600DAEC08 /* main.m */; };
 		3F4B8AE61D3F797600DAEC08 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B8AE51D3F797600DAEC08 /* AppDelegate.m */; };
 		3F4B8AEE1D3F797600DAEC08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F4B8AED1D3F797600DAEC08 /* Assets.xcassets */; };
@@ -19,6 +38,35 @@
 		2265CBC2C29F06BB7F98A680 /* Pods-Yantaiforum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yantaiforum.release.xcconfig"; path = "Pods/Target Support Files/Pods-Yantaiforum/Pods-Yantaiforum.release.xcconfig"; sourceTree = "<group>"; };
 		3F46417E1D406CAB004547A4 /* Yantaiforum-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Yantaiforum-Prefix.pch"; sourceTree = "<group>"; };
 		3F46417F1D407554004547A4 /* UsualDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UsualDefine.h; sourceTree = "<group>"; };
+		3F4641811D408D97004547A4 /* tab_icon_find_f.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_icon_find_f.png; sourceTree = "<group>"; };
+		3F4641821D408D97004547A4 /* tab_icon_find_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_icon_find_n.png; sourceTree = "<group>"; };
+		3F4641831D408D97004547A4 /* tab_icon_index_f.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_icon_index_f.png; sourceTree = "<group>"; };
+		3F4641841D408D97004547A4 /* tab_icon_index_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_icon_index_n.png; sourceTree = "<group>"; };
+		3F4641851D408D97004547A4 /* tab_icon_message_f.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_icon_message_f.png; sourceTree = "<group>"; };
+		3F4641861D408D97004547A4 /* tab_icon_message_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_icon_message_n.png; sourceTree = "<group>"; };
+		3F4641871D408D97004547A4 /* tab_icon_picshare_f.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_icon_picshare_f.png; sourceTree = "<group>"; };
+		3F4641881D408D97004547A4 /* tab_icon_picshare_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_icon_picshare_n.png; sourceTree = "<group>"; };
+		3F4641911D408E38004547A4 /* MyTabBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTabBarItem.h; sourceTree = "<group>"; };
+		3F4641921D408E38004547A4 /* MyTabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTabBarItem.m; sourceTree = "<group>"; };
+		3F4641931D408E38004547A4 /* MainTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabbarController.h; sourceTree = "<group>"; };
+		3F4641941D408E38004547A4 /* MainTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabbarController.m; sourceTree = "<group>"; };
+		3F4641AA1D40940D004547A4 /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
+		3F4641AB1D40940D004547A4 /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
+		3F4641AD1D409429004547A4 /* SharePictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharePictureViewController.h; sourceTree = "<group>"; };
+		3F4641AE1D409429004547A4 /* SharePictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharePictureViewController.m; sourceTree = "<group>"; };
+		3F4641B01D409435004547A4 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		3F4641B11D409435004547A4 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		3F4641B31D409441004547A4 /* FindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindViewController.h; sourceTree = "<group>"; };
+		3F4641B41D409441004547A4 /* FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindViewController.m; sourceTree = "<group>"; };
+		3F4641B71D409AE1004547A4 /* YTBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTBaseViewController.h; sourceTree = "<group>"; };
+		3F4641B81D409AE1004547A4 /* YTBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTBaseViewController.m; sourceTree = "<group>"; };
+		3F4641BA1D409B1A004547A4 /* YTNavgationBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTNavgationBarView.h; sourceTree = "<group>"; };
+		3F4641BB1D409B1A004547A4 /* YTNavgationBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTNavgationBarView.m; sourceTree = "<group>"; };
+		3F4641BE1D40A7DC004547A4 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		3F4641BF1D40A7DC004547A4 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		3F4641C11D40AF9F004547A4 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		3F4641C31D40B27B004547A4 /* YTHudView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTHudView.h; sourceTree = "<group>"; };
+		3F4641C41D40B27B004547A4 /* YTHudView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTHudView.m; sourceTree = "<group>"; };
 		3F4B8ADE1D3F797600DAEC08 /* Yantaiforum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yantaiforum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F4B8AE21D3F797600DAEC08 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3F4B8AE41D3F797600DAEC08 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
@@ -62,6 +110,14 @@
 		3F4641791D406509004547A4 /* FirstStagePage */ = {
 			isa = PBXGroup;
 			children = (
+				3F4641AA1D40940D004547A4 /* HomePageViewController.h */,
+				3F4641AB1D40940D004547A4 /* HomePageViewController.m */,
+				3F4641AD1D409429004547A4 /* SharePictureViewController.h */,
+				3F4641AE1D409429004547A4 /* SharePictureViewController.m */,
+				3F4641B01D409435004547A4 /* MessageViewController.h */,
+				3F4641B11D409435004547A4 /* MessageViewController.m */,
+				3F4641B31D409441004547A4 /* FindViewController.h */,
+				3F4641B41D409441004547A4 /* FindViewController.m */,
 			);
 			path = FirstStagePage;
 			sourceTree = "<group>";
@@ -69,8 +125,49 @@
 		3F46417A1D406509004547A4 /* MainTabbar */ = {
 			isa = PBXGroup;
 			children = (
+				3F4641911D408E38004547A4 /* MyTabBarItem.h */,
+				3F4641921D408E38004547A4 /* MyTabBarItem.m */,
+				3F4641931D408E38004547A4 /* MainTabbarController.h */,
+				3F4641941D408E38004547A4 /* MainTabbarController.m */,
 			);
 			path = MainTabbar;
+			sourceTree = "<group>";
+		};
+		3F4641801D408D73004547A4 /* TabbarPic */ = {
+			isa = PBXGroup;
+			children = (
+				3F4641811D408D97004547A4 /* tab_icon_find_f.png */,
+				3F4641821D408D97004547A4 /* tab_icon_find_n.png */,
+				3F4641831D408D97004547A4 /* tab_icon_index_f.png */,
+				3F4641841D408D97004547A4 /* tab_icon_index_n.png */,
+				3F4641851D408D97004547A4 /* tab_icon_message_f.png */,
+				3F4641861D408D97004547A4 /* tab_icon_message_n.png */,
+				3F4641871D408D97004547A4 /* tab_icon_picshare_f.png */,
+				3F4641881D408D97004547A4 /* tab_icon_picshare_n.png */,
+			);
+			name = TabbarPic;
+			sourceTree = "<group>";
+		};
+		3F4641B61D409AE1004547A4 /* YTBaseViewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				3F4641B71D409AE1004547A4 /* YTBaseViewController.h */,
+				3F4641B81D409AE1004547A4 /* YTBaseViewController.m */,
+				3F4641BA1D409B1A004547A4 /* YTNavgationBarView.h */,
+				3F4641BB1D409B1A004547A4 /* YTNavgationBarView.m */,
+				3F4641C31D40B27B004547A4 /* YTHudView.h */,
+				3F4641C41D40B27B004547A4 /* YTHudView.m */,
+			);
+			path = YTBaseViewcontroller;
+			sourceTree = "<group>";
+		};
+		3F4641BD1D40A7DC004547A4 /* FDFullscreenPopGesture */ = {
+			isa = PBXGroup;
+			children = (
+				3F4641BE1D40A7DC004547A4 /* UINavigationController+FDFullscreenPopGesture.h */,
+				3F4641BF1D40A7DC004547A4 /* UINavigationController+FDFullscreenPopGesture.m */,
+			);
+			path = FDFullscreenPopGesture;
 			sourceTree = "<group>";
 		};
 		3F4B8AD51D3F797600DAEC08 = {
@@ -121,6 +218,8 @@
 		3F4B8AF81D3F799D00DAEC08 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				3F4641C11D40AF9F004547A4 /* back.png */,
+				3F4641801D408D73004547A4 /* TabbarPic */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -128,6 +227,7 @@
 		3F4B8AF91D3F79F200DAEC08 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				3F4641BD1D40A7DC004547A4 /* FDFullscreenPopGesture */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -135,6 +235,7 @@
 		3F4B8AFA1D3F79F200DAEC08 /* SuperClass */ = {
 			isa = PBXGroup;
 			children = (
+				3F4641B61D409AE1004547A4 /* YTBaseViewcontroller */,
 			);
 			path = SuperClass;
 			sourceTree = "<group>";
@@ -239,7 +340,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F4641901D408D97004547A4 /* tab_icon_picshare_n.png in Resources */,
+				3F4641891D408D97004547A4 /* tab_icon_find_f.png in Resources */,
+				3F46418E1D408D97004547A4 /* tab_icon_message_n.png in Resources */,
 				3F4B8AF11D3F797600DAEC08 /* LaunchScreen.storyboard in Resources */,
+				3F46418A1D408D97004547A4 /* tab_icon_find_n.png in Resources */,
+				3F46418B1D408D97004547A4 /* tab_icon_index_f.png in Resources */,
+				3F46418D1D408D97004547A4 /* tab_icon_message_f.png in Resources */,
+				3F4641C21D40AF9F004547A4 /* back.png in Resources */,
+				3F46418F1D408D97004547A4 /* tab_icon_picshare_f.png in Resources */,
+				3F46418C1D408D97004547A4 /* tab_icon_index_n.png in Resources */,
 				3F4B8AEE1D3F797600DAEC08 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,8 +409,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F4641B51D409441004547A4 /* FindViewController.m in Sources */,
 				3F4B8AE61D3F797600DAEC08 /* AppDelegate.m in Sources */,
+				3F4641B91D409AE1004547A4 /* YTBaseViewController.m in Sources */,
+				3F4641C01D40A7DC004547A4 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
+				3F4641BC1D409B1A004547A4 /* YTNavgationBarView.m in Sources */,
+				3F4641AC1D40940D004547A4 /* HomePageViewController.m in Sources */,
 				3F4B8AE31D3F797600DAEC08 /* main.m in Sources */,
+				3F4641961D408E38004547A4 /* MainTabbarController.m in Sources */,
+				3F4641AF1D409429004547A4 /* SharePictureViewController.m in Sources */,
+				3F4641B21D409435004547A4 /* MessageViewController.m in Sources */,
+				3F4641951D408E38004547A4 /* MyTabBarItem.m in Sources */,
+				3F4641C51D40B27B004547A4 /* YTHudView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
