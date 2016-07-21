@@ -1,0 +1,1 @@
+../../../MBMvc/Pod/Classes/Rx/TBMBRxSingletonCommand.h
