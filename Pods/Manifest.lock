@@ -31,7 +31,6 @@ PODS:
     - ReactiveCocoa
   - MBMvc/Util (1.2.0):
     - MBMvc/Protocol
-  - MBProgressHUD (1.0.0)
   - pop (1.0.9)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
@@ -43,22 +42,23 @@ PODS:
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
   - SDWebImage/Core (3.8.1)
+  - SVProgressHUD (2.0.3)
 
 DEPENDENCIES:
   - AFNetworking
   - MBMvc
-  - MBProgressHUD
   - pop
   - SDWebImage
+  - SVProgressHUD
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   MBMvc: 55a952c18ee68b1d442a6a28bef15f27b05232bf
-  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: b294b27661f18c3ef44c5a4d92967cf123aa101c
+PODFILE CHECKSUM: 89dcae0f477a58f3eec9bc84743dfbf05ef0bc98
 
 COCOAPODS: 1.1.0.beta.1

@@ -14,11 +14,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>MBProgressHUD.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-Yantaiforum.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -34,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>pop.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,12 +42,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>091CDA9879D3729CF6010FF3492A2F76</key>
+		<key>3B0F0E17D835228327C1BE801A5240F8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2B23CA330FC8AA7E3BC6F972509691CB</key>
+		<key>4212E9258C490E07B0AA46022879119E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,12 +62,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B3F76573B268016E1B38E2A6D672EC99</key>
+		<key>9EE302544FCDF93AA2B044AF18D81FB9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D058B89EB3B3DF45457A2DCD3971AFFE</key>
+		<key>CB1F493F4C22442AE6C9EF4F2C34259A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
