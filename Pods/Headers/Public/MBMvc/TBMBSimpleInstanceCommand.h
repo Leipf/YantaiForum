@@ -1,0 +1,1 @@
+../../../MBMvc/Pod/Classes/Default/TBMBSimpleInstanceCommand.h
