@@ -7,4 +7,5 @@ target 'Yantaiforum' do
     pod 'pop'
     pod 'SVProgressHUD'
     pod 'RESideMenu', '~> 4.0.7'
+    pod 'JSONModel'
 end

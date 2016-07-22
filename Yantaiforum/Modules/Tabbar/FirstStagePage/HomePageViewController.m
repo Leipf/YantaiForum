@@ -8,6 +8,7 @@
 
 #import "HomePageViewController.h"
 #import <SVProgressHUD.h>
+#import "HomePageBannerView.h"
 
 @interface HomePageViewController ()
 
@@ -26,9 +27,20 @@
     [super viewDidLoad];
     self.title = @"首 页";
 //    [self.hudView hudShow];
-    [self.hudView hudShowWithText:@"网络加载失败,请重试" afterDelay:10.0];
+//    [self.hudView hudShowWithText:@"网络加载失败,请重试" afterDelay:10.0];
 //    [SVProgressHUD show];
 //    self.view.backgroundColor = [UIColor whiteColor];
+    
+    NSArray * arr = @[@"http://magapp.ytbbs.com/upload//img/20160722/1469175233516150.jpg",
+                     @"http://magapp.ytbbs.com/upload//img/20160722/1469175234409178.jpg",
+                     @"http://magapp.ytbbs.com/upload//img/20160722/1469175235184347.jpg",
+                     @"http://magapp.ytbbs.com/upload//img/20160722/1469175234946688.jpg"];
+    NSMutableArray * imgArr = [[NSMutableArray alloc] initWithArray:@[@"http://magapp.ytbbs.com/upload//img/20160722/1469175233516150.jpg",
+                                                                      @"http://magapp.ytbbs.com/upload//img/20160722/1469175234409178.jpg",
+                                                                      @"http://magapp.ytbbs.com/upload//img/20160722/1469175235184347.jpg",
+                                                                      @"http://magapp.ytbbs.com/upload//img/20160722/1469175234946688.jpg"]];
+    HomePageBannerView * banner = [[HomePageBannerView alloc] initWithFrame:CGRectMake(0, kNavBarViewHeight, ScreenWidth, 200) imageArr:imgArr textArr:nil];
+    [self.view addSubview:banner];
     
     // Do any additional setup after loading the view.
 }
