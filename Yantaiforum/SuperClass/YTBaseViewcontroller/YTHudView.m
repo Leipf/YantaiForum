@@ -28,7 +28,7 @@
     }
     else {
         [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
-        [SVProgressHUD show];
+        [SVProgressHUD showWithStatus:@"请稍等"];
     }
 }
 

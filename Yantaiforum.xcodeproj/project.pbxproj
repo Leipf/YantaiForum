@@ -26,10 +26,13 @@
 		3F4641C01D40A7DC004547A4 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4641BF1D40A7DC004547A4 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		3F4641C21D40AF9F004547A4 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F4641C11D40AF9F004547A4 /* back.png */; };
 		3F4641C51D40B27B004547A4 /* YTHudView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4641C41D40B27B004547A4 /* YTHudView.m */; };
+		3F4641C91D40DABA004547A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4641C81D40DABA004547A4 /* AppDelegate.m */; };
 		3F4B8AE31D3F797600DAEC08 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B8AE21D3F797600DAEC08 /* main.m */; };
-		3F4B8AE61D3F797600DAEC08 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B8AE51D3F797600DAEC08 /* AppDelegate.m */; };
 		3F4B8AEE1D3F797600DAEC08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F4B8AED1D3F797600DAEC08 /* Assets.xcassets */; };
 		3F4B8AF11D3F797600DAEC08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F4B8AEF1D3F797600DAEC08 /* LaunchScreen.storyboard */; };
+		3F7055561D41BE630065AD12 /* YTBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7055551D41BE630065AD12 /* YTBaseModel.m */; };
+		3F7055601D4217E20065AD12 /* YTBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F70555F1D4217E20065AD12 /* YTBaseView.m */; };
+		3F7055631D42182A0065AD12 /* HomePageBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7055621D42182A0065AD12 /* HomePageBannerView.m */; };
 		660FD226A2D15077EB58F384 /* libPods-Yantaiforum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA38CE7D037D3DF5A0A0D7E /* libPods-Yantaiforum.a */; };
 /* End PBXBuildFile section */
 
@@ -67,13 +70,19 @@
 		3F4641C11D40AF9F004547A4 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		3F4641C31D40B27B004547A4 /* YTHudView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTHudView.h; sourceTree = "<group>"; };
 		3F4641C41D40B27B004547A4 /* YTHudView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTHudView.m; sourceTree = "<group>"; };
+		3F4641C71D40DABA004547A4 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3F4641C81D40DABA004547A4 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3F4B8ADE1D3F797600DAEC08 /* Yantaiforum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yantaiforum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F4B8AE21D3F797600DAEC08 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3F4B8AE41D3F797600DAEC08 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
-		3F4B8AE51D3F797600DAEC08 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
 		3F4B8AED1D3F797600DAEC08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F4B8AF01D3F797600DAEC08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F4B8AF21D3F797600DAEC08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F7055541D41BE630065AD12 /* YTBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTBaseModel.h; sourceTree = "<group>"; };
+		3F7055551D41BE630065AD12 /* YTBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTBaseModel.m; sourceTree = "<group>"; };
+		3F70555E1D4217E20065AD12 /* YTBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTBaseView.h; sourceTree = "<group>"; };
+		3F70555F1D4217E20065AD12 /* YTBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTBaseView.m; sourceTree = "<group>"; };
+		3F7055611D42182A0065AD12 /* HomePageBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageBannerView.h; sourceTree = "<group>"; };
+		3F7055621D42182A0065AD12 /* HomePageBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageBannerView.m; sourceTree = "<group>"; };
 		DCF221F93ED5905FA56E46FE /* Pods-Yantaiforum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yantaiforum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Yantaiforum/Pods-Yantaiforum.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,6 +179,15 @@
 			path = FDFullscreenPopGesture;
 			sourceTree = "<group>";
 		};
+		3F4641C61D40DABA004547A4 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				3F4641C71D40DABA004547A4 /* AppDelegate.h */,
+				3F4641C81D40DABA004547A4 /* AppDelegate.m */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
 		3F4B8AD51D3F797600DAEC08 = {
 			isa = PBXGroup;
 			children = (
@@ -197,8 +215,8 @@
 				3F4B8AF91D3F79F200DAEC08 /* Categories */,
 				3F4B8B001D3F7C8D00DAEC08 /* Components */,
 				3F4B8AFA1D3F79F200DAEC08 /* SuperClass */,
-				3F4B8AFC1D3F7A2100DAEC08 /* Application */,
 				3F4B8AFF1D3F7B1900DAEC08 /* Utils */,
+				3F4641C61D40DABA004547A4 /* Application */,
 				3F4B8AE11D3F797600DAEC08 /* Supporting Files */,
 			);
 			path = Yantaiforum;
@@ -235,23 +253,17 @@
 		3F4B8AFA1D3F79F200DAEC08 /* SuperClass */ = {
 			isa = PBXGroup;
 			children = (
+				3F7055531D41BE240065AD12 /* YTBaseModel */,
+				3F70555A1D4217910065AD12 /* YTBaseView */,
 				3F4641B61D409AE1004547A4 /* YTBaseViewcontroller */,
 			);
 			path = SuperClass;
 			sourceTree = "<group>";
 		};
-		3F4B8AFC1D3F7A2100DAEC08 /* Application */ = {
-			isa = PBXGroup;
-			children = (
-				3F4B8AE41D3F797600DAEC08 /* AppDelegate.h */,
-				3F4B8AE51D3F797600DAEC08 /* AppDelegate.m */,
-			);
-			path = Application;
-			sourceTree = "<group>";
-		};
 		3F4B8AFD1D3F7AE500DAEC08 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3F7055571D41BEA70065AD12 /* HomePage */,
 				3F4641781D406509004547A4 /* Tabbar */,
 			);
 			path = Modules;
@@ -270,6 +282,49 @@
 			children = (
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		3F7055531D41BE240065AD12 /* YTBaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				3F7055541D41BE630065AD12 /* YTBaseModel.h */,
+				3F7055551D41BE630065AD12 /* YTBaseModel.m */,
+			);
+			path = YTBaseModel;
+			sourceTree = "<group>";
+		};
+		3F7055571D41BEA70065AD12 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				3F7055581D41C4730065AD12 /* Models */,
+				3F7055591D41C4730065AD12 /* Views */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		3F7055581D41C4730065AD12 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3F7055591D41C4730065AD12 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3F7055611D42182A0065AD12 /* HomePageBannerView.h */,
+				3F7055621D42182A0065AD12 /* HomePageBannerView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3F70555A1D4217910065AD12 /* YTBaseView */ = {
+			isa = PBXGroup;
+			children = (
+				3F70555E1D4217E20065AD12 /* YTBaseView.h */,
+				3F70555F1D4217E20065AD12 /* YTBaseView.m */,
+			);
+			path = YTBaseView;
 			sourceTree = "<group>";
 		};
 		49CE4A650C4DAAD3452FFEE5 /* Frameworks */ = {
@@ -314,6 +369,7 @@
 				TargetAttributes = {
 					3F4B8ADD1D3F797600DAEC08 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = ABE4ELR2QZ;
 					};
 				};
 			};
@@ -410,15 +466,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F4641B51D409441004547A4 /* FindViewController.m in Sources */,
-				3F4B8AE61D3F797600DAEC08 /* AppDelegate.m in Sources */,
+				3F7055601D4217E20065AD12 /* YTBaseView.m in Sources */,
 				3F4641B91D409AE1004547A4 /* YTBaseViewController.m in Sources */,
 				3F4641C01D40A7DC004547A4 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				3F4641BC1D409B1A004547A4 /* YTNavgationBarView.m in Sources */,
 				3F4641AC1D40940D004547A4 /* HomePageViewController.m in Sources */,
 				3F4B8AE31D3F797600DAEC08 /* main.m in Sources */,
 				3F4641961D408E38004547A4 /* MainTabbarController.m in Sources */,
+				3F7055561D41BE630065AD12 /* YTBaseModel.m in Sources */,
 				3F4641AF1D409429004547A4 /* SharePictureViewController.m in Sources */,
+				3F4641C91D40DABA004547A4 /* AppDelegate.m in Sources */,
 				3F4641B21D409435004547A4 /* MessageViewController.m in Sources */,
+				3F7055631D42182A0065AD12 /* HomePageBannerView.m in Sources */,
 				3F4641951D408E38004547A4 /* MyTabBarItem.m in Sources */,
 				3F4641C51D40B27B004547A4 /* YTHudView.m in Sources */,
 			);
@@ -527,6 +586,8 @@
 			baseConfigurationReference = DCF221F93ED5905FA56E46FE /* Pods-Yantaiforum.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Yantaiforum/Yantaiforum-Prefix.pch";
 				INFOPLIST_FILE = Yantaiforum/Info.plist;
@@ -534,6 +595,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sunxb.Yantaiforum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Debug;
@@ -543,6 +605,8 @@
 			baseConfigurationReference = 2265CBC2C29F06BB7F98A680 /* Pods-Yantaiforum.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Yantaiforum/Yantaiforum-Prefix.pch";
 				INFOPLIST_FILE = Yantaiforum/Info.plist;
@@ -550,6 +614,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sunxb.Yantaiforum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Release;
