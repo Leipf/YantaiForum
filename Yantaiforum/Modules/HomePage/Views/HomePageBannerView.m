@@ -19,8 +19,8 @@ static NSInteger imageCount = 3;
     UIPageControl * pageControl;
     UILabel * textLbl;
     
-    NSMutableArray * scrollImgArr;
-    NSMutableArray * scrollTextArr;
+    NSArray * scrollImgArr;
+    NSArray * scrollTextArr;
     
     UIImageView * leftImgView;
     UIImageView * middleImgView;
@@ -36,12 +36,12 @@ static NSInteger imageCount = 3;
 
 @implementation HomePageBannerView
 
-- (instancetype)initWithFrame:(CGRect)frame imageArr:(NSMutableArray *)_imgArr textArr:(NSMutableArray *)_textArr {
+- (instancetype)initWithFrame:(CGRect)frame imageArr:(NSArray *)_imgArr textArr:(NSArray *)_textArr {
     
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor whiteColor];
-        scrollImgArr = [[NSMutableArray alloc] initWithArray:_imgArr];
-        scrollTextArr = [[NSMutableArray alloc] initWithArray:_textArr];
+        scrollImgArr = _imgArr;
+        scrollTextArr = _textArr;
         
         imgCount = scrollImgArr.count;
         
@@ -113,7 +113,7 @@ static NSInteger imageCount = 3;
 }
 
 - (void)addTimer {
-    timer = [NSTimer scheduledTimerWithTimeInterval:4 target:self selector:@selector(bannerScroll) userInfo:nil repeats:YES];
+    timer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(bannerScroll) userInfo:nil repeats:YES];
 }
 
 - (void)closeTimer {

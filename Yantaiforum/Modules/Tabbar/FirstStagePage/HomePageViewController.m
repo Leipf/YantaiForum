@@ -30,6 +30,12 @@
 //    [self.hudView hudShowWithText:@"网络加载失败,请重试" afterDelay:10.0];
 //    [SVProgressHUD show];
 //    self.view.backgroundColor = [UIColor whiteColor];
+    NSString * apiStr= @"http://magapp.ytbbs.com/pro_index_home?_token=3308211df41e3681029bb3d51b3a24e3&build=9.3.3.0&catid=10&clienttype=ios&deviceid=E6A86C3B-D768-4A51-90F4-1FD04B51978C&network=WiFi&p=1&step=20&version=51";
+    [[YTNetRequest shareInstance] netRequestType:0 API:apiStr params:nil succeedBlock:^(id object) {
+        NSLog(@"%@",object);
+    } failure:^(NSError *error) {
+        
+    }];
     
     UITableView * tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, kNavBarViewHeight, __Screen_Width, __Height_noNavTab)];
     tableview.delegate = self;

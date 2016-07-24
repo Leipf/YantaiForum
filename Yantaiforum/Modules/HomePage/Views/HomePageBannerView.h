@@ -10,6 +10,6 @@
 
 @interface HomePageBannerView : YTBaseView
 
-- (instancetype)initWithFrame:(CGRect)frame imageArr:(NSMutableArray *)_imgArr textArr:(NSMutableArray *)_textArr;
+- (instancetype)initWithFrame:(CGRect)frame imageArr:(NSArray *)_imgArr textArr:(NSArray *)_textArr;
 
 @end
