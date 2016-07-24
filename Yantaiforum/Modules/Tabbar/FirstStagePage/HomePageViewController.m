@@ -10,7 +10,7 @@
 #import <SVProgressHUD.h>
 #import "HomePageBannerView.h"
 
-@interface HomePageViewController ()
+@interface HomePageViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @end
 
@@ -31,18 +31,35 @@
 //    [SVProgressHUD show];
 //    self.view.backgroundColor = [UIColor whiteColor];
     
-    NSArray * arr = @[@"http://magapp.ytbbs.com/upload//img/20160722/1469175233516150.jpg",
-                     @"http://magapp.ytbbs.com/upload//img/20160722/1469175234409178.jpg",
-                     @"http://magapp.ytbbs.com/upload//img/20160722/1469175235184347.jpg",
-                     @"http://magapp.ytbbs.com/upload//img/20160722/1469175234946688.jpg"];
+    UITableView * tableview = [[UITableView alloc] initWithFrame:CGRectMake(0, kNavBarViewHeight, __Screen_Width, __Height_noNavTab)];
+    tableview.delegate = self;
+    tableview.dataSource = self;
+    [self.view addSubview:tableview];
+    
     NSMutableArray * imgArr = [[NSMutableArray alloc] initWithArray:@[@"http://magapp.ytbbs.com/upload//img/20160722/1469175233516150.jpg",
                                                                       @"http://magapp.ytbbs.com/upload//img/20160722/1469175234409178.jpg",
                                                                       @"http://magapp.ytbbs.com/upload//img/20160722/1469175235184347.jpg",
                                                                       @"http://magapp.ytbbs.com/upload//img/20160722/1469175234946688.jpg"]];
-    HomePageBannerView * banner = [[HomePageBannerView alloc] initWithFrame:CGRectMake(0, kNavBarViewHeight, ScreenWidth, 200) imageArr:imgArr textArr:nil];
+    NSArray * arr = @[@"11111111111",@"222222222",@"3333333333",@"4444444444"];
+    HomePageBannerView * banner = [[HomePageBannerView alloc] initWithFrame:CGRectMake(0, kNavBarViewHeight, ScreenWidth, 200) imageArr:imgArr textArr:arr];
     [self.view addSubview:banner];
     
     // Do any additional setup after loading the view.
+}
+
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 50;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString * cellID = @"homePage";
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+    }
+    cell.textLabel.text = [NSString stringWithFormat:@"第%ld个",indexPath.row];
+    return cell;
 }
 
 - (void)didReceiveMemoryWarning {

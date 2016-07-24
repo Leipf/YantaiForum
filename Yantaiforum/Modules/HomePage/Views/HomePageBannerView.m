@@ -8,78 +8,167 @@
 
 #import "HomePageBannerView.h"
 
-#define bannerView_width self.frame.size.width
+#define bannerView_width   self.frame.size.width
+#define bannerView_height  (self.frame.size.height-30)
+
+static NSInteger imageCount = 3;
 
 @interface HomePageBannerView ()<UIScrollViewDelegate>
 {
     UIScrollView * rootScroll;
+    UIPageControl * pageControl;
+    UILabel * textLbl;
     
     NSMutableArray * scrollImgArr;
     NSMutableArray * scrollTextArr;
+    
+    UIImageView * leftImgView;
+    UIImageView * middleImgView;
+    UIImageView * rightImgView;
+    
+    NSInteger currentImgIndex;
+    
+    NSInteger imgCount;
+    
+    NSTimer * timer;
 }
 @end
 
 @implementation HomePageBannerView
 
 - (instancetype)initWithFrame:(CGRect)frame imageArr:(NSMutableArray *)_imgArr textArr:(NSMutableArray *)_textArr {
+    
     if (self = [super initWithFrame:frame]) {
-        
+        self.backgroundColor = [UIColor whiteColor];
         scrollImgArr = [[NSMutableArray alloc] initWithArray:_imgArr];
         scrollTextArr = [[NSMutableArray alloc] initWithArray:_textArr];
         
-        [self addBanner];
+        imgCount = scrollImgArr.count;
+        
+        [self addScrollView];
+        [self addImageViews];
+        [self addPageControl];
+        [self addTextLebal];
+        
+        [self setDefaultImg];
     }
     return self;
 }
-//withImageArr:(NSMutableArray *)_imgArr textArr:(NSMutableArray *)_textArr
-- (void)addBanner {
+
+#pragma mark 添加滚动视图
+- (void)addScrollView {
     rootScroll = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, bannerView_width, self.frame.size.height-30)];
+    rootScroll.showsVerticalScrollIndicator = NO;
+    rootScroll.showsHorizontalScrollIndicator = NO;
+    rootScroll.pagingEnabled = YES;
     rootScroll.delegate = self;
-    rootScroll.backgroundColor = [UIColor greenColor];
-    rootScroll.contentSize = CGSizeMake(bannerView_width, 0);
+    //    rootScroll.backgroundColor = [UIColor greenColor];
+    rootScroll.contentSize = CGSizeMake(bannerView_width*(imgCount), 0);
     rootScroll.contentOffset = CGPointMake(bannerView_width, 0);
     [self addSubview:rootScroll];
-
-    [self dealWithArray:scrollImgArr];
-    [self dealWithArray:scrollTextArr];
-    
-    for (int i = 0; i < scrollImgArr.count; i ++) {
-        UIImageView * scrollImg = [[UIImageView alloc] initWithFrame:CGRectMake(bannerView_width*i, 0, bannerView_width, self.frame.size.height-30)];
-        [scrollImg sd_setImageWithURL:[NSURL URLWithString:scrollImgArr[i]]];
-        [rootScroll addSubview:scrollImg];
-    }
-    
-    
-    [NSTimer scheduledTimerWithTimeInterval:4.0 target:self selector:@selector(bannerScroll) userInfo:nil repeats:YES];
     
 }
 
-- (void)dealWithArray:(NSMutableArray *)_arr {
-    if (_arr.count != 0) {
-        [_arr insertObject:_arr[_arr.count-1] atIndex:0];
-        [_arr addObject:_arr[1]];
-    }
+#pragma mark 添加三张图片
+- (void)addImageViews {
+    leftImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, bannerView_width, bannerView_height)];
+    [rootScroll addSubview:leftImgView];
+    
+    middleImgView = [[UIImageView alloc] initWithFrame:CGRectMake(bannerView_width, 0, bannerView_width, bannerView_height)];
+    [rootScroll addSubview:middleImgView];
+    
+    rightImgView = [[UIImageView alloc] initWithFrame:CGRectMake(bannerView_width*2, 0, bannerView_width, bannerView_height)];
+    [rootScroll addSubview:rightImgView];
+    
 }
 
-//
+#pragma mark 添加小圆点
+- (void)addPageControl {
+    pageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(bannerView_width-100, bannerView_height, 100, 30)];
+    pageControl.numberOfPages = imgCount;
+    pageControl.currentPage = 0;
+    pageControl.currentPageIndicatorTintColor = color(0, 151, 194);
+    pageControl.pageIndicatorTintColor = [UIColor grayColor];
+    [self addSubview:pageControl];
+}
+
+#pragma mark 添加提示信息控件
+- (void)addTextLebal {
+    textLbl = [[UILabel alloc] initWithFrame:CGRectMake(10, bannerView_height, bannerView_width-100-20, 30)];
+    textLbl.font = Font12;
+    textLbl.textAlignment = NSTextAlignmentLeft;
+    textLbl.textColor = [UIColor blackColor];
+    textLbl.text = scrollTextArr[0];
+    [self addSubview:textLbl];
+}
+
+#pragma mark 设置默认图片
+- (void)setDefaultImg {
+    [middleImgView sd_setImageWithURL:[NSURL URLWithString:scrollImgArr[0]]];
+    [leftImgView sd_setImageWithURL:[NSURL URLWithString:scrollImgArr[imgCount-1]]];
+    [rightImgView sd_setImageWithURL:[NSURL URLWithString:scrollImgArr[1]]];
+    currentImgIndex = 0;
+    
+    [self addTimer];
+}
+
+- (void)addTimer {
+    timer = [NSTimer scheduledTimerWithTimeInterval:4 target:self selector:@selector(bannerScroll) userInfo:nil repeats:YES];
+}
+
+- (void)closeTimer {
+    [timer invalidate];
+}
+
+
+#pragma mark 自动滚动的事件
 - (void)bannerScroll {
-    
-    [UIView animateWithDuration:1.5 animations:^{
+    [UIView animateWithDuration:0.6 animations:^{
         rootScroll.contentOffset = CGPointMake(rootScroll.contentOffset.x + self.frame.size.width, 0);
     }];
     [self scrollViewDidEndDecelerating:rootScroll];
 }
 
+
+
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    CGFloat offSet = scrollView.contentOffset.x;
+    if (scrollView == rootScroll) {
+        [self reloadImg];
+        rootScroll.contentOffset = CGPointMake(bannerView_width, 0);
+        pageControl.currentPage = currentImgIndex;
+        textLbl.text = scrollTextArr[currentImgIndex];
+    }
     
-    if (offSet == bannerView_width*(scrollImgArr.count-1)) {
-        scrollView.contentOffset = CGPointMake(bannerView_width, 0);
-        
+}
+
+#pragma mark 重新加载图片位置
+- (void)reloadImg {
+    NSInteger leftImageIndex,rightImageIndex;
+    CGPoint offset = rootScroll.contentOffset;
+    if (offset.x > bannerView_width) { //向右滑动
+        currentImgIndex = (currentImgIndex+1)%imgCount;
+    }else if(offset.x < bannerView_width){ //向左滑动
+        currentImgIndex = (currentImgIndex+imgCount-1)%imgCount;
     }
-    else if(offSet == 0){
-        scrollView.contentOffset = CGPointMake((scrollImgArr.count-2)*bannerView_width, 0);
-    }
+    [middleImgView sd_setImageWithURL:[NSURL URLWithString:scrollImgArr[currentImgIndex]]];
+    
+    //重新设置左右图片
+    leftImageIndex = (currentImgIndex+imgCount-1) % imgCount;
+    rightImageIndex = (currentImgIndex+1) % imgCount;
+    
+    [leftImgView sd_setImageWithURL:[NSURL URLWithString:scrollImgArr[leftImageIndex]]];
+    [rightImgView sd_setImageWithURL:[NSURL URLWithString:scrollImgArr[rightImageIndex]]];
+}
+
+
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [self closeTimer];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    [self addTimer];
+
 }
 
 
