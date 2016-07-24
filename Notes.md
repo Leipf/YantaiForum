@@ -8,3 +8,8 @@
 1. 首页的banner, pageControl圆点大小改变
 
 
+
+
+
+####代码要求
+新建的ViewController要继承自YTBaseViewController

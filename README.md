@@ -1,8 +1,5 @@
 # YantaiForum
 
-###代码要求
-####新建的ViewController要继承自YTBaseViewController
-
 ====
 
 ####文件分类
