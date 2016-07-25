@@ -34,6 +34,8 @@
 		3F7055561D41BE630065AD12 /* YTBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7055551D41BE630065AD12 /* YTBaseModel.m */; };
 		3F7055601D4217E20065AD12 /* YTBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F70555F1D4217E20065AD12 /* YTBaseView.m */; };
 		3F7055631D42182A0065AD12 /* HomePageBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7055621D42182A0065AD12 /* HomePageBannerView.m */; };
+		3F882A5F1D464F2700F166EE /* UIViewController+Push.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F882A5E1D464F2700F166EE /* UIViewController+Push.m */; };
+		3F882A651D465C6100F166EE /* HomePageFocusBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F882A641D465C6100F166EE /* HomePageFocusBtnView.m */; };
 		3F8C1ED81D45F5BF00555587 /* UIColor+ColorUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8C1ED71D45F5BF00555587 /* UIColor+ColorUtility.m */; };
 		3F8C1EDC1D460D8200555587 /* YTHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8C1EDB1D460D8200555587 /* YTHUD.m */; };
 		3F8C1EE21D46106200555587 /* HomePageListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8C1EE01D46106200555587 /* HomePageListCell.m */; };
@@ -91,6 +93,10 @@
 		3F70555F1D4217E20065AD12 /* YTBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTBaseView.m; sourceTree = "<group>"; };
 		3F7055611D42182A0065AD12 /* HomePageBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageBannerView.h; sourceTree = "<group>"; };
 		3F7055621D42182A0065AD12 /* HomePageBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageBannerView.m; sourceTree = "<group>"; };
+		3F882A5D1D464F2700F166EE /* UIViewController+Push.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Push.h"; sourceTree = "<group>"; };
+		3F882A5E1D464F2700F166EE /* UIViewController+Push.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Push.m"; sourceTree = "<group>"; };
+		3F882A631D465C6100F166EE /* HomePageFocusBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageFocusBtnView.h; sourceTree = "<group>"; };
+		3F882A641D465C6100F166EE /* HomePageFocusBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageFocusBtnView.m; sourceTree = "<group>"; };
 		3F8C1ED61D45F5BF00555587 /* UIColor+ColorUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorUtility.h"; sourceTree = "<group>"; };
 		3F8C1ED71D45F5BF00555587 /* UIColor+ColorUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorUtility.m"; sourceTree = "<group>"; };
 		3F8C1EDA1D460D8200555587 /* YTHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTHUD.h; sourceTree = "<group>"; };
@@ -264,6 +270,8 @@
 				3F8C1ED61D45F5BF00555587 /* UIColor+ColorUtility.h */,
 				3F8C1ED71D45F5BF00555587 /* UIColor+ColorUtility.m */,
 				3F4641BD1D40A7DC004547A4 /* FDFullscreenPopGesture */,
+				3F882A5D1D464F2700F166EE /* UIViewController+Push.h */,
+				3F882A5E1D464F2700F166EE /* UIViewController+Push.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -345,6 +353,8 @@
 			children = (
 				3F7055611D42182A0065AD12 /* HomePageBannerView.h */,
 				3F7055621D42182A0065AD12 /* HomePageBannerView.m */,
+				3F882A631D465C6100F166EE /* HomePageFocusBtnView.h */,
+				3F882A641D465C6100F166EE /* HomePageFocusBtnView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -540,11 +550,13 @@
 				3F4641C01D40A7DC004547A4 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				3F4641BC1D409B1A004547A4 /* YTNavgationBarView.m in Sources */,
 				3F4641AC1D40940D004547A4 /* HomePageViewController.m in Sources */,
+				3F882A651D465C6100F166EE /* HomePageFocusBtnView.m in Sources */,
 				3FA11B2B1D44F55900A443D1 /* YTNetRequest.m in Sources */,
 				3F4B8AE31D3F797600DAEC08 /* main.m in Sources */,
 				3F4641961D408E38004547A4 /* MainTabbarController.m in Sources */,
 				3F7055561D41BE630065AD12 /* YTBaseModel.m in Sources */,
 				3F4641AF1D409429004547A4 /* SharePictureViewController.m in Sources */,
+				3F882A5F1D464F2700F166EE /* UIViewController+Push.m in Sources */,
 				3F8C1EE21D46106200555587 /* HomePageListCell.m in Sources */,
 				3F4641C91D40DABA004547A4 /* AppDelegate.m in Sources */,
 				3F52CEDE1D45B17B008AE037 /* Mod_HomePage.m in Sources */,

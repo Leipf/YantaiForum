@@ -13,6 +13,7 @@
 #import "MJPullTableView.h"
 #import <SVProgressHUD.h>
 #import "HomePageListCell.h"
+#import "HomePageFocusBtnView.h"
 
 @interface HomePageViewController ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 {
@@ -110,6 +111,7 @@
 #pragma mark 添加底部scrollView
 - (void)loadRootScrollView {
     rootScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, kNavBarViewHeight+30, ScreenWidth, __Height_noNavTab-30)];
+    rootScrollView.backgroundColor = [UIColor clearColor];
     rootScrollView.contentSize = CGSizeMake(ScreenWidth*3, 0);
     rootScrollView.pagingEnabled = YES;
     rootScrollView.showsVerticalScrollIndicator = NO;
@@ -118,6 +120,7 @@
     [self.view addSubview:rootScrollView];
     
     rootTableView = [[MJPullTableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, __Height_noNavTab-30)];
+    rootTableView.backgroundColor = [UIColor clearColor];
     rootTableView.rowHeight = 80;
     rootTableView.delegate = self;
     rootTableView.dataSource = self;
@@ -152,21 +155,66 @@
 }
 
 
+#pragma mark tableView的delegate
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 2;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (section == 0) {
+        return 1;
+    }
     return homePageMod.list.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString * cellID = @"homePageCell";
-    NSArray * cellArr = [[NSBundle mainBundle] loadNibNamed:@"HomePageListCell" owner:self options:nil];
-    HomePageListCell * cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    if (!cell) {
-        cell = cellArr[0];
+    static NSString * btnCellID = @"focusBtnCell";
+    if (indexPath.section == 0) {
+//        return nil;
+        UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:btnCellID];
+        if (!cell) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:btnCellID];
+            HomePageFocusBtnView * focusBtnView = [[HomePageFocusBtnView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenWidth/2.0) dataArr:nil];
+            [cell.contentView addSubview:focusBtnView];
+        }
+        return cell;
     }
-    cell.model = homePageMod.list[indexPath.row];
+    else {
+        NSArray * cellArr = [[NSBundle mainBundle] loadNibNamed:@"HomePageListCell" owner:self options:nil];
+        HomePageListCell * cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+        if (!cell) {
+            cell = cellArr[0];
+        }
+        cell.model = homePageMod.list[indexPath.row];
+        return cell;
+    }
     
-//    cell.textLabel.text = [NSString stringWithFormat:@"第%ld个",indexPath.row];
-    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        return ScreenWidth/2.0;
+    }
+    else {
+        return 80.0;
+    }
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        UIView * header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 10)];
+        header.backgroundColor = [UIColor clearColor];
+        return header;
+    }
+    return nil;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return 10.0;
+    }
+    return 0;
 }
 
 #pragma mark scrollView的delegate
