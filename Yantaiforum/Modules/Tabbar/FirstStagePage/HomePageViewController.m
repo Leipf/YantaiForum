@@ -164,6 +164,7 @@
         cell = cellArr[0];
     }
     cell.model = homePageMod.list[indexPath.row];
+    
 //    cell.textLabel.text = [NSString stringWithFormat:@"第%ld个",indexPath.row];
     return cell;
 }
