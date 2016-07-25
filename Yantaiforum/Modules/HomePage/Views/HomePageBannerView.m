@@ -11,7 +11,7 @@
 #define bannerView_width   self.frame.size.width
 #define bannerView_height  (self.frame.size.height-30)
 
-static NSInteger imageCount = 3;
+//static NSInteger imageCount = 3;
 
 @interface HomePageBannerView ()<UIScrollViewDelegate>
 {
@@ -43,6 +43,10 @@ static NSInteger imageCount = 3;
         scrollImgArr = _imgArr;
         scrollTextArr = _textArr;
         
+        if (_imgArr.count==0 || _textArr.count==0) {
+            return self;
+        }
+        
         imgCount = scrollImgArr.count;
         
         [self addScrollView];
@@ -62,7 +66,6 @@ static NSInteger imageCount = 3;
     rootScroll.showsHorizontalScrollIndicator = NO;
     rootScroll.pagingEnabled = YES;
     rootScroll.delegate = self;
-    //    rootScroll.backgroundColor = [UIColor greenColor];
     rootScroll.contentSize = CGSizeMake(bannerView_width*(imgCount), 0);
     rootScroll.contentOffset = CGPointMake(bannerView_width, 0);
     [self addSubview:rootScroll];
@@ -75,11 +78,18 @@ static NSInteger imageCount = 3;
     [rootScroll addSubview:leftImgView];
     
     middleImgView = [[UIImageView alloc] initWithFrame:CGRectMake(bannerView_width, 0, bannerView_width, bannerView_height)];
+    middleImgView.userInteractionEnabled = YES;
+    UITapGestureRecognizer * tapImg = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapOnBannerImage:)];
+    [middleImgView addGestureRecognizer:tapImg];
     [rootScroll addSubview:middleImgView];
     
     rightImgView = [[UIImageView alloc] initWithFrame:CGRectMake(bannerView_width*2, 0, bannerView_width, bannerView_height)];
     [rootScroll addSubview:rightImgView];
     
+}
+
+- (void)tapOnBannerImage:(UITapGestureRecognizer *)recognize {
+    NSLog(@"%ld",currentImgIndex);
 }
 
 #pragma mark 添加小圆点
@@ -145,9 +155,9 @@ static NSInteger imageCount = 3;
 - (void)reloadImg {
     NSInteger leftImageIndex,rightImageIndex;
     CGPoint offset = rootScroll.contentOffset;
-    if (offset.x > bannerView_width) { //向右滑动
+    if (offset.x > bannerView_width) { // 右滑
         currentImgIndex = (currentImgIndex+1)%imgCount;
-    }else if(offset.x < bannerView_width){ //向左滑动
+    }else if(offset.x < bannerView_width){ // 左滑
         currentImgIndex = (currentImgIndex+imgCount-1)%imgCount;
     }
     [middleImgView sd_setImageWithURL:[NSURL URLWithString:scrollImgArr[currentImgIndex]]];

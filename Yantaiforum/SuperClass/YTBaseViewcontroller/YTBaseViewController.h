@@ -8,11 +8,8 @@
 
 #import "TBMBDefaultRootViewController.h"
 #import "TBMBDefaultRootViewController+TBMBProxy.h"
-//#import "UINavigationController+FDFullscreenPopGesture.h"
-#import "YTHudView.h"
 
 @class YTNavgationBarView;
-//@class YTHudView;
 
 @interface YTBaseViewController : TBMBDefaultRootViewController
 
@@ -31,9 +28,6 @@
 
 @property (nonatomic,strong) UIView * subNavBarView;
 
-
-
-@property (nonatomic,strong) YTHudView * hudView;//hud
 
 - (void)loadNavigationBarView;
 

@@ -10,6 +10,11 @@
 #define UsualDefine_h
 
 
+
+#define YTHTTP_HEAD   @"http://magapp.ytbbs.com"
+
+
+
 /*************************************************************************
  屏幕尺寸
  *************************************************************************/
@@ -55,6 +60,8 @@
 #define COLOR(r, g, b)              [UIColor colorWithRed: r / 255.0 green: g / 255.0 blue: b / 255.0 alpha: 1.0]
 #define COLOR_A(r, g, b, a)         [UIColor colorWithRed: r / 255.0 green: g / 255.0 blue: b / 255.0 alpha: a]
 
+#define color_575757    [UIColor convertHexToRGB:@"575757"]//黑色
+#define color_717171    [UIColor convertHexToRGB:@"717171"]//灰色
 
 /*************************************************************************
  NSLog
