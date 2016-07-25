@@ -10,6 +10,14 @@
 
 @interface HomePageBannerView : YTBaseView
 
+/**
+ *  参数说明
+ *
+ *  @param frame    frame
+ *  @param _imgArr  轮播图片的urlStr数组
+ *  @param _textArr 轮播图片对应的文字 数组
+ *
+ */
 - (instancetype)initWithFrame:(CGRect)frame imageArr:(NSArray *)_imgArr textArr:(NSArray *)_textArr;
 
 @end
