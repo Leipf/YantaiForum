@@ -42,11 +42,6 @@
     // -- 加载导航栏
     [self loadNavigationBarView];
     
-    // -- 添加HUD
-    self.hudView = [[YTHudView alloc] initWithFrame:CGRectMake(0, 64, ScreenWidth, __Height_noTab)];
-    [self.view addSubview:self.hudView];
-    [self.view sendSubviewToBack:self.hudView];
-    
 }
 
 

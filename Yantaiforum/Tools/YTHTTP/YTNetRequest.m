@@ -20,21 +20,31 @@ static YTNetRequest * shareRequest = nil;
     return shareRequest;
 }
 
+
++ (void)getRequestAPI:(NSString *)_api params:(NSDictionary *)_params succeedBlock:(NetSucceedBlock)_succeed failure:(NetFailureBlock)_failure {
+    [[YTNetRequest shareInstance] netRequestType:NET_GET API:_api params:_params succeedBlock:_succeed failure:_failure];
+}
+
++ (void)postRequestAPI:(NSString *)_api params:(NSDictionary *)_params succeedBlock:(NetSucceedBlock)_succeed failure:(NetFailureBlock)_failure {
+    [[YTNetRequest shareInstance] netRequestType:NET_POST API:_api params:_params succeedBlock:_succeed failure:_failure];
+}
+
+
 - (void)netRequestType:(NETREQUEST_TYPE)_type API:(NSString *)_api params:(NSDictionary *)_params succeedBlock:(NetSucceedBlock)_succeed failure:(NetFailureBlock)_failure {
     AFHTTPSessionManager * manager = [AFHTTPSessionManager manager];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
     if (_type == NET_GET) {
         [manager GET:_api parameters:_params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            _succeed(responseObject);
+            _succeed(task,responseObject);
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            _failure(error);
+            _failure(task,error);
         }];
     }
     else if (_type == NET_POST) {
         [manager POST:_api parameters:_params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            _succeed(responseObject);
+            _succeed(task,responseObject);
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-            _failure(error);
+            _failure(task,error);
         }];
     }
 }

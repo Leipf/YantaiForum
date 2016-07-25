@@ -12,4 +12,6 @@
 
 @interface YTBaseModel : JSONModel
 
+- (instancetype)initWithResponseJSONObject:(id)_object;
+
 @end
