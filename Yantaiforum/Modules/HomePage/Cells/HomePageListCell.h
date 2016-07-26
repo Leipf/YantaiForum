@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *hotLabel;
+@property (weak, nonatomic) IBOutlet UIView *lineView;
 
 @property (nonatomic,strong)Mod_HomePageList * model;
 

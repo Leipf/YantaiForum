@@ -36,6 +36,7 @@
 		3F7055631D42182A0065AD12 /* HomePageBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7055621D42182A0065AD12 /* HomePageBannerView.m */; };
 		3F882A5F1D464F2700F166EE /* UIViewController+Push.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F882A5E1D464F2700F166EE /* UIViewController+Push.m */; };
 		3F882A651D465C6100F166EE /* HomePageFocusBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F882A641D465C6100F166EE /* HomePageFocusBtnView.m */; };
+		3F8930C61D4759F10010D8C3 /* HTMLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8930C51D4759F10010D8C3 /* HTMLViewController.m */; };
 		3F8C1ED81D45F5BF00555587 /* UIColor+ColorUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8C1ED71D45F5BF00555587 /* UIColor+ColorUtility.m */; };
 		3F8C1EDC1D460D8200555587 /* YTHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8C1EDB1D460D8200555587 /* YTHUD.m */; };
 		3F8C1EE21D46106200555587 /* HomePageListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8C1EE01D46106200555587 /* HomePageListCell.m */; };
@@ -97,6 +98,8 @@
 		3F882A5E1D464F2700F166EE /* UIViewController+Push.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Push.m"; sourceTree = "<group>"; };
 		3F882A631D465C6100F166EE /* HomePageFocusBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageFocusBtnView.h; sourceTree = "<group>"; };
 		3F882A641D465C6100F166EE /* HomePageFocusBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageFocusBtnView.m; sourceTree = "<group>"; };
+		3F8930C41D4759F10010D8C3 /* HTMLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLViewController.h; sourceTree = "<group>"; };
+		3F8930C51D4759F10010D8C3 /* HTMLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLViewController.m; sourceTree = "<group>"; };
 		3F8C1ED61D45F5BF00555587 /* UIColor+ColorUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorUtility.h"; sourceTree = "<group>"; };
 		3F8C1ED71D45F5BF00555587 /* UIColor+ColorUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ColorUtility.m"; sourceTree = "<group>"; };
 		3F8C1EDA1D460D8200555587 /* YTHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTHUD.h; sourceTree = "<group>"; };
@@ -290,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				3F7055571D41BEA70065AD12 /* HomePage */,
+				3F8930C31D4759990010D8C3 /* HTMLController */,
 				3F4641781D406509004547A4 /* Tabbar */,
 			);
 			path = Modules;
@@ -366,6 +370,16 @@
 				3F70555F1D4217E20065AD12 /* YTBaseView.m */,
 			);
 			path = YTBaseView;
+			sourceTree = "<group>";
+		};
+		3F8930C31D4759990010D8C3 /* HTMLController */ = {
+			isa = PBXGroup;
+			children = (
+				3F8930C41D4759F10010D8C3 /* HTMLViewController.h */,
+				3F8930C51D4759F10010D8C3 /* HTMLViewController.m */,
+			);
+			name = HTMLController;
+			path = Tabbar/HTMLController;
 			sourceTree = "<group>";
 		};
 		3F8C1ED91D460D6E00555587 /* YTHUD */ = {
@@ -551,6 +565,7 @@
 				3F4641BC1D409B1A004547A4 /* YTNavgationBarView.m in Sources */,
 				3F4641AC1D40940D004547A4 /* HomePageViewController.m in Sources */,
 				3F882A651D465C6100F166EE /* HomePageFocusBtnView.m in Sources */,
+				3F8930C61D4759F10010D8C3 /* HTMLViewController.m in Sources */,
 				3FA11B2B1D44F55900A443D1 /* YTNetRequest.m in Sources */,
 				3F4B8AE31D3F797600DAEC08 /* main.m in Sources */,
 				3F4641961D408E38004547A4 /* MainTabbarController.m in Sources */,

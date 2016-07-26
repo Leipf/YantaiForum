@@ -8,8 +8,8 @@
 
 #import "TBMBDefaultRootViewController.h"
 #import "TBMBDefaultRootViewController+TBMBProxy.h"
-
-@class YTNavgationBarView;
+#import "YTNavgationBarView.h"
+//@class YTNavgationBarView;
 
 @interface YTBaseViewController : TBMBDefaultRootViewController
 

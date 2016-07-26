@@ -89,6 +89,7 @@
 }
 
 - (void)tapOnBannerImage:(UITapGestureRecognizer *)recognize {
+    self.bannerBlock(currentImgIndex);
     NSLog(@"%ld",currentImgIndex);
 }
 

@@ -14,6 +14,9 @@
 #import <SVProgressHUD.h>
 #import "HomePageListCell.h"
 #import "HomePageFocusBtnView.h"
+#import "HTMLViewController.h"
+
+static CGFloat cellHeight = 80.0;
 
 @interface HomePageViewController ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 {
@@ -29,6 +32,11 @@
     UIView * topControlView;
     
     NSInteger preBtn;
+    
+    CGFloat preOffSet;//记录上次的偏移
+    CGFloat startOffSet;
+    CGFloat endOffSet;
+    
 }
 @end
 
@@ -110,7 +118,7 @@
 
 #pragma mark 添加底部scrollView
 - (void)loadRootScrollView {
-    rootScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, kNavBarViewHeight+30, ScreenWidth, __Height_noNavTab-30)];
+    rootScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, kNavBarViewHeight+30, ScreenWidth, __Height_noTab-30)];
     rootScrollView.backgroundColor = [UIColor clearColor];
     rootScrollView.contentSize = CGSizeMake(ScreenWidth*3, 0);
     rootScrollView.pagingEnabled = YES;
@@ -119,11 +127,13 @@
     rootScrollView.delegate = self;
     [self.view addSubview:rootScrollView];
     
-    rootTableView = [[MJPullTableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, __Height_noNavTab-30)];
+    rootTableView = [[MJPullTableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, __Height_noTab-30)];
+    rootTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     rootTableView.backgroundColor = [UIColor clearColor];
-    rootTableView.rowHeight = 80;
+    rootTableView.rowHeight = cellHeight;
     rootTableView.delegate = self;
     rootTableView.dataSource = self;
+    rootTableView.hidden = YES;
     [rootScrollView addSubview:rootTableView];
     
 }
@@ -138,6 +148,7 @@
         homePageMod = [[Mod_HomePage alloc] initWithResponseJSONObject:object];
         [self loadRootTableViewBanner];
         [rootTableView reloadData];
+        rootTableView.hidden = NO;
         [YTHUD hudHidden];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         [YTHUD hudHidden];
@@ -151,6 +162,11 @@
 //        NSLog(@"%@",bannerMod.picurl);
     }
     HomePageBannerView * bannerView = [[HomePageBannerView alloc] initWithFrame:CGRectMake(0, kNavBarViewHeight, ScreenWidth, 200) imageArr:bannerImgArr textArr:bannerTextArr];
+    bannerView.bannerBlock = ^(NSInteger tapIndex){
+        Mod_HomePageBanner * tapBannerModel = homePageMod.jump_j1[tapIndex];
+        
+        [self pushNewController:@"HTMLViewController" params:(NSMutableDictionary *)@{@"params_HTML":[NSString stringWithFormat:@"%@%@",YTHTTP_HEAD,tapBannerModel.jump_url]}];
+    };
     rootTableView.tableHeaderView = bannerView;
 }
 
@@ -171,13 +187,15 @@
     static NSString * cellID = @"homePageCell";
     static NSString * btnCellID = @"focusBtnCell";
     if (indexPath.section == 0) {
-//        return nil;
         UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:btnCellID];
         if (!cell) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:btnCellID];
-            HomePageFocusBtnView * focusBtnView = [[HomePageFocusBtnView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenWidth/2.0) dataArr:nil];
-            [cell.contentView addSubview:focusBtnView];
+            UIView * lineView = [[UIView alloc] initWithFrame:CGRectMake(0, ScreenWidth/2.0-1, ScreenWidth, 1)];
+            lineView.backgroundColor = color(233, 233, 233);
+            [cell.contentView addSubview:lineView];
         }
+        HomePageFocusBtnView * focusBtnView = [[HomePageFocusBtnView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenWidth/2.0) dataArr:homePageMod.jump_j3];
+        [cell.contentView addSubview:focusBtnView];
         return cell;
     }
     else {
@@ -197,7 +215,7 @@
         return ScreenWidth/2.0;
     }
     else {
-        return 80.0;
+        return cellHeight;
     }
 }
 
@@ -243,7 +261,58 @@
         }
         preBtn = index;
     }
-    
+}
+
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (scrollView == rootTableView) {
+        // navigation & tabbar的效果
+        if (preOffSet > scrollView.contentOffset.y && scrollView.contentOffset.y > 0) { // 下拉
+            [UIView animateWithDuration:0.3 animations:^{
+                [self.tabBarController.tabBar setFrame:CGRectMake(0, ScreenHeight-49, ScreenWidth, 49)];
+                self.navbarView.frame = CGRectMake(0, 0, ScreenWidth, 64);
+                topControlView.frame = CGRectMake(0, 64, ScreenWidth, 30);
+                rootScrollView.frame = CGRectMake(0, kNavBarViewHeight+30, ScreenWidth, __Height_noTab-30);
+                rootTableView.frame = CGRectMake(0, 0, ScreenWidth, __Height_noTab-30);
+                self.navbarView.frame = CGRectMake(0, 0, ScreenWidth, 64);
+                topControlView.frame = CGRectMake(0, 64, ScreenWidth, 30);
+                self.navbarView.alpha = 1;
+                self.titleLbl.alpha = 1;
+            }];
+        }
+        else if(preOffSet < scrollView.contentOffset.y && scrollView.contentOffset.y > 0) { // 上滑
+            [UIView animateWithDuration:0.3 animations:^{
+                [self.tabBarController.tabBar setFrame:CGRectMake(0, ScreenHeight, ScreenWidth, 49)];
+                rootScrollView.frame = CGRectMake(0, 50, ScreenWidth, __Height_noTab-30+50);
+                rootTableView.frame = CGRectMake(0, 0, ScreenWidth, __Height_noTab-30+50);
+                self.navbarView.frame = CGRectMake(0, -44, ScreenWidth, 64);
+                topControlView.frame = CGRectMake(0, 20, ScreenWidth, 30);
+                self.navbarView.alpha = 0.9;
+                self.titleLbl.alpha = 0;
+                
+            }];
+        }
+        preOffSet = scrollView.contentOffset.y;
+        NSLog(@"-----%f",scrollView.contentOffset.y);
+    }
+}
+
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    if (scrollView == rootTableView) {
+        NSLog(@"%f----%f---%f",ScreenHeight,self.tabBarController.tabBar.frame.origin.y,self.tabBarController.tabBar.frame.size.height);
+        startOffSet = scrollView.contentOffset.y;
+    }
+//    NSLog(@"-!~~~---%f",scrollView.contentOffset.y);
+}
+
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
+    if (scrollView == rootTableView) {
+        // end > start 上
+        endOffSet = scrollView.contentOffset.y;
+        
+    }
+//    NSLog(@"++++++%f",scrollView.contentOffset.y);
 }
 
 - (void)didReceiveMemoryWarning {

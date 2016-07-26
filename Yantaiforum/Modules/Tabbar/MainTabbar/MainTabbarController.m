@@ -90,36 +90,6 @@
 
 - (void)tabbarAction:(UIButton *)item {
     
-//    if (item.tag - 100 == 4) {
-//        
-//        NSString * path = [NSHomeDirectory() stringByAppendingString:@"/Documents/personInfo.plist"];
-//        NSDictionary * dict = [NSDictionary dictionaryWithContentsOfFile:path];
-//        
-//        if (dict == nil) {
-//            PersonViewController * personVC = [[PersonViewController alloc] init];
-//            personVC.entrance = @"person";
-//            personVC.delegate = self;
-//            
-//            UINavigationController * perNav = [[UINavigationController alloc] initWithRootViewController:personVC];
-//            [self presentViewController:perNav animated:YES completion:nil];
-//            return;
-//        }
-//        //        else{
-//        //
-//        ////            for (MyTabBarItem *item in _myTabbar.subviews) {
-//        ////                if ([item isKindOfClass:[UIButton class]]) {
-//        ////                    item.selected = NO;
-//        ////                }
-//        ////            }
-//        ////
-//        ////                item.selected = YES;
-//        ////                NSInteger index = item.tag - 100;
-//        ////                self.selectedIndex = index;
-//        //        }
-//        
-//        
-//    }
-    
     //取消所有按钮的选中状态
     for (MyTabBarItem *item in myTabbar.subviews) {
         if ([item isKindOfClass:[UIButton class]]) {

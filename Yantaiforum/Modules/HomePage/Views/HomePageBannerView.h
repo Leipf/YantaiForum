@@ -8,7 +8,12 @@
 
 #import "YTBaseView.h"
 
+typedef void(^BannerBlock)(NSInteger tapIndex);
+
 @interface HomePageBannerView : YTBaseView
+
+
+@property (nonatomic,copy)BannerBlock bannerBlock;
 
 /**
  *  参数说明
@@ -19,5 +24,6 @@
  *
  */
 - (instancetype)initWithFrame:(CGRect)frame imageArr:(NSArray *)_imgArr textArr:(NSArray *)_textArr;
+
 
 @end
