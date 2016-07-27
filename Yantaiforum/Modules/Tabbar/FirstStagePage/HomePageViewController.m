@@ -9,12 +9,16 @@
 #import "HomePageViewController.h"
 #import <SVProgressHUD.h>
 #import "HomePageBannerView.h"
+
 #import "Mod_HomePage.h"
+#import "Mod_MyFollows.h"
+
 #import "MJPullTableView.h"
 #import <SVProgressHUD.h>
 #import "HomePageListCell.h"
 #import "HomePageFocusBtnView.h"
 #import "HTMLViewController.h"
+
 
 static CGFloat cellHeight = 80.0;
 
@@ -113,6 +117,21 @@ static CGFloat cellHeight = 80.0;
     rootScrollView.contentOffset = CGPointMake(ScreenWidth*(button.tag-1000), 0);
     preBtn = button.tag-1000;
     
+    if (button.tag == 1001) {
+        [self startFollowsNetWorking];
+    }
+    
+}
+
+- (void)startFollowsNetWorking {
+    [YTHUD hudShow];
+    NSString * apiStr= @"http://magapp.ytbbs.com/pro_group_contentattention?_token=3308211df41e3681029bb3d51b3a24e3&build=9.3.3.0&clienttype=ios&deviceid=E6A86C3B-D768-4A51-90F4-1FD04B51978C&network=WiFi&p=1&step=20&version=51";
+    [YTNetRequest getRequestAPI:apiStr params:nil succeedBlock:^(NSURLSessionDataTask *task, id object) {
+        Mod_MyFollows * followsMod = [[Mod_MyFollows alloc] initWithResponseJSONObject:object];
+        [YTHUD hudHidden];
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [YTHUD hudHidden];
+    }];
 }
 
 

@@ -31,6 +31,10 @@
 		3F4B8AF11D3F797600DAEC08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F4B8AEF1D3F797600DAEC08 /* LaunchScreen.storyboard */; };
 		3F52CEDE1D45B17B008AE037 /* Mod_HomePage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F52CEDD1D45B17B008AE037 /* Mod_HomePage.m */; };
 		3F52CEE31D45C673008AE037 /* MJPullTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F52CEE21D45C673008AE037 /* MJPullTableView.m */; };
+		3F660C241D48ABC9001F7815 /* MyFollowsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F660C231D48ABC9001F7815 /* MyFollowsView.m */; };
+		3F660C271D48ABEF001F7815 /* Mod_MyFollows.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F660C261D48ABEF001F7815 /* Mod_MyFollows.m */; };
+		3F660C2B1D48BBF8001F7815 /* MyFollowsListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F660C291D48BBF8001F7815 /* MyFollowsListCell.m */; };
+		3F660C2C1D48BBF8001F7815 /* MyFollowsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F660C2A1D48BBF8001F7815 /* MyFollowsListCell.xib */; };
 		3F7055561D41BE630065AD12 /* YTBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7055551D41BE630065AD12 /* YTBaseModel.m */; };
 		3F7055601D4217E20065AD12 /* YTBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F70555F1D4217E20065AD12 /* YTBaseView.m */; };
 		3F7055631D42182A0065AD12 /* HomePageBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7055621D42182A0065AD12 /* HomePageBannerView.m */; };
@@ -88,6 +92,13 @@
 		3F52CEDD1D45B17B008AE037 /* Mod_HomePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod_HomePage.m; sourceTree = "<group>"; };
 		3F52CEE11D45C673008AE037 /* MJPullTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJPullTableView.h; sourceTree = "<group>"; };
 		3F52CEE21D45C673008AE037 /* MJPullTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJPullTableView.m; sourceTree = "<group>"; };
+		3F660C221D48ABC9001F7815 /* MyFollowsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFollowsView.h; sourceTree = "<group>"; };
+		3F660C231D48ABC9001F7815 /* MyFollowsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFollowsView.m; sourceTree = "<group>"; };
+		3F660C251D48ABEF001F7815 /* Mod_MyFollows.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mod_MyFollows.h; sourceTree = "<group>"; };
+		3F660C261D48ABEF001F7815 /* Mod_MyFollows.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mod_MyFollows.m; sourceTree = "<group>"; };
+		3F660C281D48BBF8001F7815 /* MyFollowsListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFollowsListCell.h; sourceTree = "<group>"; };
+		3F660C291D48BBF8001F7815 /* MyFollowsListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFollowsListCell.m; sourceTree = "<group>"; };
+		3F660C2A1D48BBF8001F7815 /* MyFollowsListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyFollowsListCell.xib; sourceTree = "<group>"; };
 		3F7055541D41BE630065AD12 /* YTBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTBaseModel.h; sourceTree = "<group>"; };
 		3F7055551D41BE630065AD12 /* YTBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTBaseModel.m; sourceTree = "<group>"; };
 		3F70555E1D4217E20065AD12 /* YTBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTBaseView.h; sourceTree = "<group>"; };
@@ -348,6 +359,8 @@
 			children = (
 				3F52CEDC1D45B17B008AE037 /* Mod_HomePage.h */,
 				3F52CEDD1D45B17B008AE037 /* Mod_HomePage.m */,
+				3F660C251D48ABEF001F7815 /* Mod_MyFollows.h */,
+				3F660C261D48ABEF001F7815 /* Mod_MyFollows.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -359,6 +372,8 @@
 				3F7055621D42182A0065AD12 /* HomePageBannerView.m */,
 				3F882A631D465C6100F166EE /* HomePageFocusBtnView.h */,
 				3F882A641D465C6100F166EE /* HomePageFocusBtnView.m */,
+				3F660C221D48ABC9001F7815 /* MyFollowsView.h */,
+				3F660C231D48ABC9001F7815 /* MyFollowsView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -397,6 +412,9 @@
 				3F8C1EDF1D46106200555587 /* HomePageListCell.h */,
 				3F8C1EE01D46106200555587 /* HomePageListCell.m */,
 				3F8C1EE11D46106200555587 /* HomePageListCell.xib */,
+				3F660C281D48BBF8001F7815 /* MyFollowsListCell.h */,
+				3F660C291D48BBF8001F7815 /* MyFollowsListCell.m */,
+				3F660C2A1D48BBF8001F7815 /* MyFollowsListCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -488,6 +506,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F660C2C1D48BBF8001F7815 /* MyFollowsListCell.xib in Resources */,
 				3F4641901D408D97004547A4 /* tab_icon_picshare_n.png in Resources */,
 				3F4641891D408D97004547A4 /* tab_icon_find_f.png in Resources */,
 				3F46418E1D408D97004547A4 /* tab_icon_message_n.png in Resources */,
@@ -563,18 +582,21 @@
 				3F4641B91D409AE1004547A4 /* YTBaseViewController.m in Sources */,
 				3F4641C01D40A7DC004547A4 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				3F4641BC1D409B1A004547A4 /* YTNavgationBarView.m in Sources */,
+				3F660C271D48ABEF001F7815 /* Mod_MyFollows.m in Sources */,
 				3F4641AC1D40940D004547A4 /* HomePageViewController.m in Sources */,
 				3F882A651D465C6100F166EE /* HomePageFocusBtnView.m in Sources */,
 				3F8930C61D4759F10010D8C3 /* HTMLViewController.m in Sources */,
 				3FA11B2B1D44F55900A443D1 /* YTNetRequest.m in Sources */,
 				3F4B8AE31D3F797600DAEC08 /* main.m in Sources */,
 				3F4641961D408E38004547A4 /* MainTabbarController.m in Sources */,
+				3F660C2B1D48BBF8001F7815 /* MyFollowsListCell.m in Sources */,
 				3F7055561D41BE630065AD12 /* YTBaseModel.m in Sources */,
 				3F4641AF1D409429004547A4 /* SharePictureViewController.m in Sources */,
 				3F882A5F1D464F2700F166EE /* UIViewController+Push.m in Sources */,
 				3F8C1EE21D46106200555587 /* HomePageListCell.m in Sources */,
 				3F4641C91D40DABA004547A4 /* AppDelegate.m in Sources */,
 				3F52CEDE1D45B17B008AE037 /* Mod_HomePage.m in Sources */,
+				3F660C241D48ABC9001F7815 /* MyFollowsView.m in Sources */,
 				3F8C1ED81D45F5BF00555587 /* UIColor+ColorUtility.m in Sources */,
 				3F4641B21D409435004547A4 /* MessageViewController.m in Sources */,
 				3F7055631D42182A0065AD12 /* HomePageBannerView.m in Sources */,
