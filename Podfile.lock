@@ -1,0 +1,70 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - JSONModel (1.2.0)
+  - MBMvc (1.2.0):
+    - MBMvc/Default (= 1.2.0)
+    - MBMvc/Protocol (= 1.2.0)
+    - MBMvc/Proxy (= 1.2.0)
+    - MBMvc/Rx (= 1.2.0)
+    - MBMvc/Util (= 1.2.0)
+  - MBMvc/Default (1.2.0):
+    - MBMvc/Protocol
+    - MBMvc/Util
+  - MBMvc/Protocol (1.2.0)
+  - MBMvc/Proxy (1.2.0):
+    - MBMvc/Default
+    - MBMvc/Util
+  - MBMvc/Rx (1.2.0):
+    - ReactiveCocoa
+  - MBMvc/Util (1.2.0):
+    - MBMvc/Protocol
+  - pop (1.0.9)
+  - ReactiveCocoa (2.5):
+    - ReactiveCocoa/UI (= 2.5)
+  - ReactiveCocoa/Core (2.5):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.5)
+  - ReactiveCocoa/UI (2.5):
+    - ReactiveCocoa/Core
+  - RESideMenu (4.0.7)
+  - SDWebImage (3.8.1):
+    - SDWebImage/Core (= 3.8.1)
+  - SDWebImage/Core (3.8.1)
+  - SVProgressHUD (2.0.3)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.0)
+  - JSONModel
+  - MBMvc
+  - pop
+  - RESideMenu (~> 4.0.7)
+  - SDWebImage (~> 3.8)
+  - SVProgressHUD
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  JSONModel: 12523685c4b623553ccf844bbbf7007624317b2c
+  MBMvc: 55a952c18ee68b1d442a6a28bef15f27b05232bf
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  RESideMenu: f24c508404b49c667344c54aba7e590883533958
+  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+
+PODFILE CHECKSUM: 0dd2abc02d1c12b3fef788eaf4949902baad6762
+
+COCOAPODS: 1.1.0.beta.1
